@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Xclmanagement | Trusted Advisors & Strategic Experts</title>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        
+        :root {
+            --bg-grad: linear-gradient(135deg, #1c1917, #292524);
+            --card-bg: #292524;
+            --card-border: #44403c;
+            --text-main: #fafaf9;
+            --text-muted: #d6d3d1;
+            --accent: #f43f5e;
+            --accent-hover: #e11d48;
+            --body-bg: #1c1917;
+            --font: 'Outfit', sans-serif, sans-serif;
+            --card-radius: 0;
+            --card-shadow: 0 10px 15px -3px rgba(0,0,0,0.1);
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: var(--font);
+            background: var(--body-bg);
+            color: var(--text-muted);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+        
+        a {
+            color: var(--accent);
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        
+        a:hover {
+            color: var(--accent-hover);
+        }
+    
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+        
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 3rem 0;
+        }
+        
+        .logo {
+            font-size: 1.6rem;
+            font-weight: 700;
+            color: var(--text-main);
+            letter-spacing: -1px;
+        }
+        
+        .logo span {
+            color: var(--accent);
+        }
+        
+        nav {
+            display: flex;
+            gap: 2.5rem;
+        }
+        
+        nav a {
+            color: var(--text-muted);
+            font-weight: 600;
+        }
+        
+        .hero-banner {
+            padding: 8rem 0;
+            text-align: center;
+            background: var(--bg-grad);
+            border-radius: var(--card-radius);
+            border: 1px solid var(--card-border);
+            margin-bottom: 6rem;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .hero-banner::after {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background-image: radial-gradient(var(--accent) 0.5px, transparent 0.5px);
+            background-size: 20px 20px;
+            opacity: 0.05;
+        }
+        
+        .subtitle {
+            color: var(--accent);
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            font-size: 0.9rem;
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+        }
+        
+        .title {
+            font-size: clamp(2rem, 5vw, 3.8rem);
+            color: var(--text-main);
+            font-weight: 700;
+            margin-bottom: 2rem;
+            line-height: 1.1;
+        }
+        
+        .sec-wrap {
+            margin-bottom: 8rem;
+        }
+        
+        .grid-3 {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+        
+        .deck-card {
+            background: var(--card-bg);
+            border: 1px solid var(--card-border);
+            border-radius: var(--card-radius);
+            box-shadow: var(--card-shadow);
+            padding: 3rem;
+            position: relative;
+        }
+        
+        .badge {
+            position: absolute;
+            top: 2rem; right: 2rem;
+            width: 30px; height: 30px;
+            border-radius: 50%;
+            background: var(--card-border);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.8rem;
+            font-weight: 700;
+            color: var(--accent);
+        }
+        
+        .deck-title {
+            font-size: 1.3rem;
+            font-weight: 600;
+            color: var(--text-main);
+            margin-bottom: 1rem;
+            margin-top: 1rem;
+        }
+        
+        .cta-strip {
+            background: var(--card-bg);
+            border: 1px solid var(--card-border);
+            padding: 4rem;
+            border-radius: var(--card-radius);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 2rem;
+            margin-bottom: 8rem;
+        }
+        
+        @media (max-width: 768px) {
+            .cta-strip {
+                flex-direction: column;
+                text-align: center;
+            }
+        }
+        
+        input, textarea {
+            background: var(--body-bg);
+            border: 1px solid var(--card-border);
+            padding: 1.2rem;
+            color: var(--text-main);
+            border-radius: var(--card-radius);
+            margin-bottom: 1.5rem;
+            width: 100%;
+        }
+        
+        button {
+            background: var(--accent);
+            color: #ffffff;
+            border: none;
+            padding: 1.2rem 3rem;
+            font-weight: 600;
+            border-radius: var(--card-radius);
+            cursor: pointer;
+        }
+        
+        footer {
+            border-top: 1px solid var(--card-border);
+            padding: 4rem 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 2rem;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <header>
+            <div class="logo">Xclmanagement<span>.</span></div>
+            <nav>
+                <a href="#about">About</a>
+                <a href="#services">Services</a>
+                <a href="#contact">Contact</a>
+            </nav>
+        </header>
+
+        <div class="hero-banner">
+            <span class="subtitle">Trusted Advisors & Strategic Experts</span>
+            <h1 class="title">Tailored Business Solutions & Strategic Management</h1>
+            <p style="max-width: 700px; margin: 0 auto 3rem auto; font-size: 1.2rem;">We help organizations optimize operations, ensure compliance, and achieve sustainable long-term growth.</p>
+            <a href="#contact" class="btn" style="display:inline-block; background:var(--accent); color:#fff; padding:1rem 2.5rem; border-radius:var(--card-radius); font-weight:600;">Get Started</a>
+        </div>
+
+        <div id="about" class="sec-wrap">
+            <div class="grid-3" style="grid-template-columns: 1fr 1fr; align-items: center; gap: 4rem;">
+                <div>
+                    <span class="subtitle">Story</span>
+                    <h2 class="title" style="font-size: 2.2rem;">Our Philosophy</h2>
+                    <p style="font-size: 1.15rem; line-height: 1.8;">At Xclmanagement, we believe in integrity, innovation, and long-term partnership. Our mission is to empower our clients with the tools and insights they need to navigate complex challenges and seize new opportunities. Whether you are looking to optimize your current setup or launch a brand new venture, we are here to support you every step of the way.</p>
+                </div>
+                <div style="background: var(--card-bg); border: 1px solid var(--card-border); border-radius: var(--card-radius); padding: 4rem; text-align: center;">
+                    <span style="font-size: 4rem; font-weight: 700; color: var(--accent); opacity: 0.3;">X</span>
+                    <h3 style="color: var(--text-main); margin: 2rem 0 1rem 0;">Dedicated to Growth</h3>
+                    <p>We work closely with clients to deliver lasting value and sustainable competitive advantage.</p>
+                </div>
+            </div>
+        </div>
+
+        <div id="services" class="sec-wrap">
+            <span class="subtitle">Offerings</span>
+            <h2 class="title" style="font-size: 2.2rem; margin-bottom: 4rem;">Capabilities</h2>
+            <div class="grid-3">
+                <div class="deck-card">
+                    <div class="badge">A</div>
+                    <h3 class="deck-title">Management Consulting</h3>
+                    <p>Operational audits, bottleneck analysis, and efficiency restructuring.</p>
+                </div>
+                <div class="deck-card">
+                    <div class="badge">B</div>
+                    <h3 class="deck-title">Compliance Audits</h3>
+                    <p>Ensure your business meets all local regulations, health guidelines, and safety laws.</p>
+                </div>
+                <div class="deck-card">
+                    <div class="badge">C</div>
+                    <h3 class="deck-title">Staff Recruitment</h3>
+                    <p>Headhunting, talent acquisition, and executive search for critical roles.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="cta-strip">
+            <div>
+                <h3 style="color: var(--text-main); font-size: 1.6rem; margin-bottom: 0.5rem;">Have questions?</h3>
+                <p>Reach out to us directly or request a callback.</p>
+            </div>
+            <a href="#contact" class="btn" style="display:inline-block; background:var(--accent); color:#fff; padding:1rem 2.5rem; border-radius:var(--card-radius); font-weight:600;">Request Callback</a>
+        </div>
+
+        <div id="contact" class="sec-wrap">
+            <span class="subtitle">Contact</span>
+            <h2 class="title" style="font-size: 2.2rem; margin-bottom: 4rem;">Send Inquiry</h2>
+            <form action="#" onsubmit="alert('Thank you! Your message has been sent.'); return false;" style="max-width: 800px; margin: 0 auto;">
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; margin-bottom: 1.5rem;">
+                    <input type="text" placeholder="Your Name" required>
+                    <input type="email" placeholder="Email Address" required>
+                </div>
+                <textarea placeholder="How can we help?" rows="6" required></textarea>
+                <button type="submit">Submit Form</button>
+            </form>
+        </div>
+
+        <footer>
+            <p>&copy; 2026 Xclmanagement. All rights reserved.</p>
+            <p>hello@xclmanagement.com | +1 (555) 019-2834</p>
+        </footer>
+    </div>
+
+</body>
+</html>
